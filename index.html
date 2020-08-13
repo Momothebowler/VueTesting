@@ -26,7 +26,41 @@
             }
         </style>
     </head>
+    
     <body>
+      <div id="app-6">
+        <form
+          id="app"
+          @submit="checkForm"
+          methos="post"
+          novalidate="true"
+        >
+          <p>apples {{ message }}</p>
+        <p>
+          <input 
+          id="email"
+          v-model="email"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          >
+        </p>
+        <p>
+          <input 
+          id="submit_pass"
+          v-model="Password" 
+          type="text"
+          placeholder="Your Password"
+          >
+        </p>
+          <input
+          type="submit"
+          value="Submit"
+          >
+      </div>
+      <script src="index.js"></script>
+  </body>
+</html>
         <!--<div id="app">
             {{ message }}
         </div>
@@ -55,42 +89,34 @@
             <button v-on:click="reverseMessage">Reverse Message</button>
         </div>
       -->
-
-
-
-
-        <div id="app-6">
-          <form
-            id="app"
-            @submit="checkForm"
-            methos="post"
-            novalidate="true"
-          >
-            <p>apples {{ message }}</p>
-          <p>
-            <input 
-            id="email"
-            v-model="email"
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            >
-          </p>
-          <p>
-            <input 
-            id="submit_pass"
-            v-model="Password" 
-            type="text"
-            placeholder="Your Password"
-            >
-          </p>
-            <input
-            type="submit"
-            value="Submit"
-            >
+<!--<div id="app">
+            {{ message }}
         </div>
 
+        <div id="app-2">
+            <span v-bind:title="message">
+              Hover your mouse over me for a few seconds
+              to see my dynamically bound title!
+            </span>
+        </div>
 
+        <div id="app-3">
+            <span v-if="seen">Now you see me</span>
+        </div>
+
+        <div id="app-4">
+            <ol>
+              <li v-for="todo in todos">
+                {{ todo.text }}
+              </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+      -->
 
 
 
@@ -193,6 +219,3 @@
                 </ul>
               </div>
             -->
-        <script src="index.js"></script>
-    </body>
-</html>
